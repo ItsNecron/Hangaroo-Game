@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Archivo", "sans-serif";
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #fa9e00;
+    background-size: cover;
+}
+
+.container {
+    width: 1200px;
+    height: 600px;
+    background: #fff;
+    display:flex;
+    gap: 70px;
+    align-items: flex-end;
+    padding: 60px 40px;
+    border-radius: 10px;
+}
+
+.game-box img {
+    max-width: 500px;
+    align-content: center;
+}
+
+.game-box h1 {
+    font-size: 1.45rem;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.word-display {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.word-display .letter {
+    width:28px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    border-bottom: 3px solid #000;
+}
+
+.word-display .letter.guessed {
+    border-color: transparent;
+    margin: -40px 0 35px;
+}
+
+.hint-button {
+    width: auto;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.hint-button h3 {
+    text-align: center;
+}
+
+.game-frame h4 {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.game-frame h4 b {
+    font-weight: 600;
+}
+
+.game-frame .guesses-count b {
+    margin-top: 15px;
+    color:#fa0000;
+}
+
+.game-frame .keyboard {
+    display: flex;
+    gap: 5px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.keyboard button {
+    color: #000;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    background: #fa9e00;
+    width: calc(100% / 9 - 5px);
+
+}
+
+.keyboard button:hover {
+    background: #f7a81f;
+}
+
+@media (max-width: 780px) {
+    .container {
+        flex-direction: column;
+        padding: 30px 15px;
+        align-items: center;
+    }
+    .game-box img {
+        max-width: 200px;
+    }
+    .game-box h1 {
+        display: none;
+    }
+}
